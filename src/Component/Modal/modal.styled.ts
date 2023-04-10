@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colors } from '../Commons/colors';
 
 export const ModalBackground = styled('div')`
   display: none; 

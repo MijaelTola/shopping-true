@@ -30,7 +30,7 @@ export const Thb = styled('th')`
 
 export const Tr = styled('tr')`
     height: 50px;
-    background-color: ${props => +(props.id ?? '0') % 2 == 0 ? colors.white : colors.light_gray};
+    background-color: ${props => +(props.id ?? '0') % 2 === 0 ? colors.white : colors.light_gray};
 `
 
 export const Trh = styled('tr')`

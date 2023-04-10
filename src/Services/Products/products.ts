@@ -18,11 +18,11 @@ export const useProductsList = () => {
             return data;
         })
         return res;
-    }, []);
+    }, [updateProducts]);
 
     useEffect(() => {
         getProductsList();
-    }, [])
+    }, [getProductsList])
 
     return {
         getProductsList,
@@ -53,7 +53,7 @@ export const useProductById = (id: string) => {
                 getProductByList();
             }
         }
-    }, [products, id]);
+    }, [products, id, getProductByList]);
 
     return {
         product,
