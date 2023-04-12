@@ -9,7 +9,7 @@ export const FormInput = (props: FormItemProps) => {
                 {props.label}:
             </FormTitle>
             <FormValue>
-                <FormInputStyled onChange={(e) => props.onChange?.(e.target.value)} value={props.value}/>
+                <FormInputStyled data-testid={props.name} name={props.name} onChange={(e) => props.onChange?.(e.target.value)} value={props.value}/>
             </FormValue>
         </FormWrapper>
     )
@@ -22,7 +22,7 @@ export const FormSelect = (props: FormSelectProps) => {
                 {props.label}
             </FormTitle>
             <FormValue>
-                <select onChange={(e) => props.onChange?.(e.target.value)}>
+                <select data-testid={props.name} name={props.name} onChange={(e) => props.onChange?.(e.target.value)}>
                     {
                         props.options.map(opt => (
                             <option value={opt.value}> {opt.label}</option>

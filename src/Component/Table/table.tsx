@@ -19,7 +19,7 @@ export const Table = (props: TableProps) => {
             <TableBody>
                 {
                     props.dataSource?.map((row,index) => (
-                        <Tr key={index} id={index+''}>
+                        <Tr data-testid="table-item" key={index} id={index+''}>
                             {
                                 props.columns?.map(column => (
                                     <Thb key={column.key}>

@@ -7,6 +7,7 @@ export const useCategoryList = () => {
     const getCategoryList = useCallback(async () => {
         const res: Category[] = await require('../__mocked_data__/categoryList.json')
         setCategoryList(res);
+        return res;
     }, []);
 
     useEffect(() => {
@@ -14,7 +15,8 @@ export const useCategoryList = () => {
     }, [getCategoryList]);
 
     return {
-        categoryList
+        categoryList,
+        getCategoryList
     };
 
 }

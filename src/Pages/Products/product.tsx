@@ -69,10 +69,10 @@ export const Product = () => {
             </ProductDetails>
             <Footer>
                 {
-                    create ? <PrimaryButton onClick={()=> handleSubmit()}> Create </PrimaryButton>
+                    create ? <PrimaryButton data-testid="create-item" onClick={()=> handleSubmit()}> Create </PrimaryButton>
                         : <DeleteButton onClick={() => navigate(-1)}> Delete </DeleteButton>
                 }
-                <SecondaryButton onClick={() => navigate(-1)}> Cancel </SecondaryButton>
+                <SecondaryButton data-testid="cancel-button" onClick={() => navigate(-1)}> Cancel </SecondaryButton>
             </Footer>
         </div>
     )

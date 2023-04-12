@@ -11,7 +11,7 @@ export const Navbar = (props: NavBarProps) => {
             <ItemsSections>
                 <NavItems>
                     {props.items?.map(item => (
-                        <LinkStyled to={item.name ?? ''}>  {item.label } </LinkStyled>
+                        <LinkStyled data-testid={item.key} to={item.name ?? ''}>  {item.label } </LinkStyled>
                     ))}
                 </NavItems>
                 <NavItems>

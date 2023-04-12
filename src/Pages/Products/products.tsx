@@ -13,10 +13,10 @@ export const Products = () => {
     return (
         <div>
             <Heading>
-                <div>
+                <div data-testid="product-title">
                     PRODUCTS
                 </div>
-                <PrimaryButton onClick={() => navigate(ROUTES.PRODUCT.BY_ID('create'))}>
+                <PrimaryButton data-testid="create-button" onClick={() => navigate(ROUTES.PRODUCT.BY_ID('create'))}>
                     Create
                 </PrimaryButton>
             </Heading>
@@ -42,7 +42,7 @@ export const Products = () => {
                         {
                             name: '',
                             key: 'event',
-                            render: (value) => <SecondaryButton onClick={() => navigate(ROUTES.PRODUCT.BY_ID(value.id))}> Details </SecondaryButton>
+                            render: (value) => <SecondaryButton data-testid={`detail-button-${value.id}`} onClick={() => navigate(ROUTES.PRODUCT.BY_ID(value.id))}> Details </SecondaryButton>
                         }
                     ]}
                     dataSource={productsList}
